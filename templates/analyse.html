@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Recipe Finder
+        </title>
+    </head>
+    <body>
+        <form action='analyse_recipes' method='post'>
+            <label for="recipe">Enter the Recipe Name:</label>
+            <input type="text" name="recipe">
+            <br>
+            <button type="submit">Find Recipes</button>
+        </form>
+        {% if error %}
+        <h1>{{error}}</h1>
+        {% else %}
+        <h6>{{res}}<h6>
+        {% endif %}
+    </body>
+</html>

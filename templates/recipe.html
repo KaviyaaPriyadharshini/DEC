@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Recipe Finder
+        </title>
+    </head>
+    <body>
+        <form action='find_recipes' method='post'>
+            <label for="ingredients">Enter the Ingredients:</label>
+            <input type="text" name="ingredient">
+            <br>
+            <button type="submit">Find Recipes</button>
+        </form>
+        {% if error %}
+        <h1>{{error}}</h1>
+        {% else %}
+        <h1>{{recipe}}<h1>
+        {% endif %}
+    </body>
+</html>

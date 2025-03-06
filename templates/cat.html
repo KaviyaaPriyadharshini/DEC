@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Recipe Finder
+        </title>
+    </head>
+    <body>
+        <form action='cat_recipes' method='post'>
+            <label for="fil">Enter the Category Name:</label>
+            <input type="text" name="fil">
+            <br>
+            <button type="submit">Find Recipes</button>
+        </form>
+        {% if error %}
+        <h1>{{error}}</h1>
+        {% else %}
+        <h6>{{recipe1}}<h6>
+        <h6>{{recipe2}}<h6>
+        <h6>{{recipe3}}<h6>
+        <h6>{{recipe4}}<h6>
+        {% endif %}
+    </body>
+</html>
