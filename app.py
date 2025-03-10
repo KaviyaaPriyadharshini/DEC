@@ -40,7 +40,7 @@ def find_recipes():
         else:
             return render_template("recipe.html",error="Invalid Ingredients")
     return render("index.html")
-app.route('/cat_recipes',methods=["GET","POST"])
+@app.route('/cat_recipes',methods=["GET","POST"])
 def cat_recipes():
     if request.method=="POST":
         fil=request.form["fil"]
