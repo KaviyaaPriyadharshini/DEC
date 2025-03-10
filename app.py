@@ -39,7 +39,7 @@ def find_recipes():
             return render_template("recipe.html",recipe=result["meals"][0]["strMeal"])
         else:
             return render_template("recipe.html",error="Invalid Ingredients")
-    return render("index.html")
+    return render_template("index.html")
 @app.route('/cat_recipes',methods=["GET","POST"])
 def cat_recipes():
     if request.method=="POST":
@@ -51,7 +51,7 @@ def cat_recipes():
             return render_template("cat.html",recipe1=result["meals"][0]["strMeal"],recipe2=result["meals"][1]["strMeal"],recipe3=result["meals"][2]["strMeal"],recipe4=result["meals"][3]["strMeal"])
         else:
             return render_template("cat.html",error="Invalid Category")
-    return render("index.html")
+    return render_template("index.html")
 if __name__=="__main__":
     port = int(os.environ.get("PORT", 5000))  # Default to 5000 if PORT is not set
     app.run(host="0.0.0.0", port=port)
